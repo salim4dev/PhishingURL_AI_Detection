@@ -25,7 +25,7 @@ URL : docs.google.com/spreadsheet/viewform?formkey=dE5rVEdSV2pBdkpSRy11V3o2eDdwb
 
 Label (ex. : “bad” pour phishing, “good” pour légitime)
 
-⚙️ Étapes principales du projet
+## Étapes principales du projet
 1. Préparation et nettoyage
 Renommage des colonnes → url, label_raw
 
@@ -35,7 +35,7 @@ bad → 1 (phishing)
 
 tout autre → 0 (légitime)
 
-2. Échantillonnage stratifié
+2. Échantillonnage :
 Création d’un sous-échantillon équilibré (par défaut SAMPLE_SIZE = 120000) pour un apprentissage plus rapide.
 
 3. Extraction des caractéristiques lexicales
@@ -66,7 +66,7 @@ lgb.fit(X_train, y_train)
 ```
 Modèle performant pour données textuelles et numériques.
 
-Évalue : accuracy, F1-score, ROC-AUC, matrice de confusion.
+Évaluation : accuracy, F1-score, ROC-AUC, matrice de confusion.
 
 7. Sauvegarde du modèle (pour éviter de relancer l'entrainment à chaque fois)
 ```
